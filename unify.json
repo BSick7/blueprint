@@ -1,0 +1,9 @@
+{
+  "name": "blueprint",
+  "client": {
+    "tests": [
+      "app/fayde.json"
+    ]
+  },
+  "type": "app"
+}

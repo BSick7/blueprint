@@ -1,0 +1,29 @@
+{
+  "libs": {
+    "exjs": {
+      "exports": "exjs",
+      "base": "lib/exjs",
+      "path": "lib/exjs/dist/ex.min"
+    },
+    "fayde.controls": {
+      "exports": "Fayde.Controls",
+      "base": "lib/fayde.controls"
+    },
+    "blueprint-core": {
+      "exports": "blueprint.core",
+      "base": "lib/blueprint-core",
+      "deps": [
+        "exjs"
+      ]
+    }
+  },
+  "themes": {
+    "exjs": "none",
+    "fayde.controls": {},
+    "blueprint-core": {}
+  },
+  "debug": {
+    "warnMissingThemes": false,
+    "warnBrokenPath": false
+  }
+}
