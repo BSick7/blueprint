@@ -31,7 +31,8 @@ module.exports = function (grunt) {
             build: {
                 src: [
                     '<%= dirs.app %>/**/*.ts',
-                    '!<%= dirs.lib %>/**/*.ts'
+                    '!<%= dirs.lib %>/**/*.ts',
+                    'typings/*.d.ts'
                 ].concat(unify.typings()),
                 dest: dirs.build,
                 options: {

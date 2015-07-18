@@ -15,12 +15,17 @@
       "deps": [
         "exjs"
       ]
+    },
+    "es6-promise": {
+      "base": "lib/es6-promise",
+      "path": "lib/es6-promise/promise.js"
     }
   },
   "themes": {
     "exjs": "none",
     "fayde.controls": {},
-    "blueprint-core": {}
+    "blueprint-core": {},
+    "es6-promise": "none"
   },
   "debug": {
     "warnMissingThemes": false,

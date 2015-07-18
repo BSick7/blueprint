@@ -1,0 +1,8 @@
+{
+  "bundles": [
+    {
+      "name": "amazon-web-services",
+      "base": ""
+    }
+  ]
+}

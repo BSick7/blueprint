@@ -5,6 +5,7 @@
     "fayde": "~0.16.52",
     "exjs": "~0.2.11",
     "fayde.controls": "^0.17.0",
-    "blueprint-core": "git@github.com:BSick7/blueprint-core"
+    "blueprint-core": "git@github.com:BSick7/blueprint-core",
+    "es6-promise": "~2.2.0"
   }
 }
