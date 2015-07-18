@@ -7,11 +7,17 @@
     <Application.Resources>
         <blueprint:Container x:Key="Test" />
     </Application.Resources>
-    <Grid x:Name="LayoutRoot">
+    <Grid x:Name="LayoutRoot" ColumnDefinitions="* auto">
         <Grid.DataContext>
             <vms:MainViewModel/>
         </Grid.DataContext>
 
         <TextBlock Text="Welcome to Fayde!" />
+
+        <Grid Grid.Column="1">
+            <ListBox ItemsSource="{Binding Bundles.Items}">
+
+            </ListBox>
+        </Grid>
     </Grid>
 </Application>

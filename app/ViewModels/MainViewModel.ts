@@ -1,7 +1,9 @@
 import config = require('../config');
+import BundlesViewModel = require('./BundlesViewModel');
 
 class MainViewModel extends Fayde.MVVM.ViewModelBase {
     IsLoading = false;
+    Bundles = new BundlesViewModel();
 
     constructor () {
         super();
@@ -14,6 +16,7 @@ class MainViewModel extends Fayde.MVVM.ViewModelBase {
             .then(conf => config.getBundles(conf))
             .then(bundles => {
                 this.IsLoading = false;
+                this.Bundles.Setup(bundles.values());
             })
             .catch(err => this.IsLoading = false);
     }
