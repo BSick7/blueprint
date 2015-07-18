@@ -1,0 +1,19 @@
+{
+  "name": "amazon-web-services",
+  "containers": [
+    {
+      "uid": "6022f1f1-8687-4ffa-a1b8-dab5c18a7fa5",
+      "group": "VPC",
+      "name": "VPC",
+      "description": "Container to hold virtual private cloud."
+    },
+    {
+      "uid": "",
+      "group": "VPC",
+      "name": "Subnet",
+      "description": "Container to hold instances within a subnet."
+    }
+  ],
+  "resources": [
+  ]
+}

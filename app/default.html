@@ -14,10 +14,12 @@
         var require = {
             baseUrl: "./",
             paths: {
-                "text": "lib/requirejs-text/text"
+                "text": "lib/requirejs-text/text",
+                "es6-promise": "lib/es6-promise/promise.min"
             },
-            deps: ["text", "text!fayde.json"],
-            callback: function (text, config) {
+            deps: ["text", "text!fayde.json", "es6-promise"],
+            callback: function (text, config, promise) {
+                promise.polyfill();
                 Fayde.Bootstrap();
             }
         };

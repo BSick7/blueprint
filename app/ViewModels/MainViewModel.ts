@@ -11,11 +11,11 @@ class MainViewModel extends Fayde.MVVM.ViewModelBase {
     Load () {
         this.IsLoading = true;
         config.load()
-            .then(config => {
+            .then(conf => config.getBundles(conf))
+            .then(bundles => {
                 this.IsLoading = false;
-            }, err => {
-                this.IsLoading = false;
-            });
+            })
+            .catch(err => this.IsLoading = false);
     }
 }
 Fayde.MVVM.NotifyProperties(MainViewModel, ["IsLoading"]);

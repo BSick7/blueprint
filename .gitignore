@@ -1,3 +1,4 @@
 .idea
 app/lib
 node_modules
+app/.build
