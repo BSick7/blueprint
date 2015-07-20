@@ -12,13 +12,16 @@
             <vms:MainViewModel/>
         </Grid.DataContext>
 
-        <TextBlock Text="Welcome to Fayde!" />
+        <Grid>
+            <blueprint:Container Source="{Binding RootContainer}" />
+        </Grid>
 
         <Grid Grid.Column="1">
             <ListBox ItemsSource="{Binding Bundles.Items}">
                 <ListBox.ItemTemplate>
                     <DataTemplate>
                         <StackPanel>
+                            <Button Content="Add" Click="{EventBinding Command={Binding RelativeSource={RelativeSource ItemsControlParent}, Path=DataContext.CreateResource}, CommandParameter={Binding}}" />
                             <TextBlock Text="{Binding name}" FontSize="16" />
                             <TextBlock Text="{Binding description}" FontSize="12" FontStyle="italic" />
                         </StackPanel>
