@@ -17,8 +17,8 @@
         </Grid>
 
         <Grid Grid.Column="1">
-            <ListBox ItemsSource="{Binding Bundles.Items}">
-                <ListBox.ItemTemplate>
+            <ItemsControl ItemsSource="{Binding Bundles.Items}">
+                <ItemsControl.ItemTemplate>
                     <DataTemplate>
                         <StackPanel>
                             <Button Content="Add" Click="{EventBinding Command={Binding RelativeSource={RelativeSource ItemsControlParent}, Path=DataContext.CreateResource}, CommandParameter={Binding}}" />
@@ -26,8 +26,8 @@
                             <TextBlock Text="{Binding description}" FontSize="12" FontStyle="italic" />
                         </StackPanel>
                     </DataTemplate>
-                </ListBox.ItemTemplate>
-            </ListBox>
+                </ItemsControl.ItemTemplate>
+            </ItemsControl>
         </Grid>
     </Grid>
 </Application>
